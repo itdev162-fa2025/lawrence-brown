@@ -14,14 +14,14 @@ namespace Persistence
 
         public DataContext()
         {
-            var folder= Environment.SpecialFolder.LocalApplicationData;
+            var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
             DbPath = System.IO.Path.Join(path, "Blogbox.db");
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            optionsBuilder.UseSqlite($"Data Source={DbPath}");
+            options.UseSqlite($"Data Source={DbPath}");
         }
     }
 }

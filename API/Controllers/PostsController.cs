@@ -4,20 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.MvcL
 
 using Persistence;
 
-namespace API.Controllers
+namespace API.Controllers;
 [ApiController]
 [Route("api/[controller]")]
-{
+
     public class PostsController : ControllerBase
     {
         private readonly DataContext _context;
         public PostsController(DataContext context)
         {
-            this.ControllerContext = context;
+            this._context = context;
         }    
 
         // GET api/posts

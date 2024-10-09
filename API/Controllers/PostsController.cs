@@ -68,7 +68,7 @@ namespace API.Controllers
             {
                 return Ok(post);
             }
-
+              
             throw new Exception ("Error creating post");
         }
     }

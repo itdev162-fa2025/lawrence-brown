@@ -4,7 +4,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 
 export const routes: Routes = [
-    { path: '', component: CreatePostComponent },
+    { path: '', component: HomeComponent },
     { path: 'create', component: CreatePostComponent },
     { path: 'posts/:id', component: ViewPostComponent },
     { path: '**', component: HomeComponent, pathMatch: 'full'}
